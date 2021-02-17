@@ -27,3 +27,8 @@ Currently this standalone shiny app can be only used in Linux system.
 * Generate your Cellchat object from R/Rstudio and save the object as 'cellchat.rds' file and copy this rds file to the same '.../shiny-server/Cellchat' directory
 * Run the shiny server and open the Cellchat app from the Cellchat sublocation of the server url. e.g. 'http://localhost:3838/Cellchat'
 
+
+## Help or Suggestion
+If you have any question, comment or suggestion, please post it in the 'Issues' section or contact cellchat.package@gmail.com.
+
+

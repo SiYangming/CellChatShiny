@@ -3,7 +3,7 @@ This is CellChat's Shiny app docker container or standalone shiny app for our [C
 
 
 ## Running CellChat Shiny docker container:
-Please install [docker](https://www.docker.com/) if not on your system, and save your CellChat object from R/Rstudio as 'cellchat.rds' using `saveRDS()`. Then run the following three commands in the **Terminal**. 
+Please install [docker](https://www.docker.com/) if not on your system, and save your CellChat object from R/Rstudio as 'cellchat.rds' using `saveRDS()`. Then run the following two commands in the **Terminal**. 
 
 * Download the prebuilt container to your system via 
 

@@ -7,7 +7,7 @@ Please install [docker](https://www.docker.com/) if not on your system, and save
 
 * Download the prebuilt container to your system via 
 
-`docker pull sqjin/cellchatshiny:beta`
+`docker pull ucigenomics/cellchatshiny:beta`
 
 * Run the cellchatshiny docker container using the example command below
 
@@ -15,9 +15,9 @@ Please install [docker](https://www.docker.com/) if not on your system, and save
 
 **NB**: You MUST specify the absolute path to the cellchat.rds file you saved by modifying the part `/PATH_to_File/cellchat.rds` in the above command.  
 
-* Access the CellChat app by typing the command below in your terminal 
+* Access the CellChat app by simply clicking the url or coping and pasting the url into your browser
 
-`http://localhost:3838/Cellchat`
+'http://localhost:3838/Cellchat'
 
 
 ## Running CellChat standalone shiny app:

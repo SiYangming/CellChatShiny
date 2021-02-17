@@ -13,7 +13,7 @@ Please install [docker](https://www.docker.com/) if not on your system, and save
 
 `docker run --name cellchatshiny -p 3838:3838 -d --restart unless-stopped -v /PATH_to_File/cellchat.rds:/srv/shiny-server/Cellchat/cellchat.rds ucigenomics/cellchatshiny:beta`
 
-**NB***: You MUST specify the absolute path to the cellchat.rds file you saved by modifying the part `/PATH_to_File/cellchat.rds` in the above command.  
+**NB**: You MUST specify the absolute path to the cellchat.rds file you saved by modifying the part `/PATH_to_File/cellchat.rds` in the above command.  
 
 * Access the CellChat app by typing the command below in your terminal 
 

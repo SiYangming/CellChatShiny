@@ -17,7 +17,7 @@ Please install [docker](https://www.docker.com/) if not on your system, and save
 
 * Access the CellChat app by simply clicking the url or coping and pasting the url into your browser
 
-'http://localhost:3838/Cellchat'
+http://localhost:3838/Cellchat
 
 
 ## Running CellChat standalone shiny app:

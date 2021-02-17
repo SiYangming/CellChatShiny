@@ -1,4 +1,4 @@
-# CellChatShiny
+# CellChat Shiny App
 This is CellChat's Shiny app docker container or standalone shiny app for our [Cell-Cell Communication Atlas Explorer](http://www.cellchat.org), which allows interactive exploration of the cell-cell communication that are analyzed by our [CellChat R-package](https://github.com/sqjin/CellChat).
 
 

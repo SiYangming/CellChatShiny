@@ -3,24 +3,23 @@ This is CellChat's Shiny app docker container or standalone shiny app for our [C
 
 
 ## Running CellChat Shiny docker container:
-* Step I: Please install [docker](https://www.docker.com/) if not on your system, and save your CellChat object from R/Rstudio as 'cellchat.rds' using `saveRDS()`.
- 
- Then run the following two commands in the **Terminal**. 
+* Step I: Please install [docker](https://www.docker.com/) if not on your system, and save your CellChat object from R/Rstudio as `cellchat.rds` using `saveRDS()`.
 
-* Step II: Download the prebuilt container to your system via 
+* Step II: Download the prebuilt container to your system by running the command below in the terminal
+```
+docker pull ucigenomics/cellchatshiny:beta
+```
 
-```docker pull ucigenomics/cellchatshiny:beta```
-
-* Step III: Run the cellchatshiny docker container using the example command below
-
+* Step III: Run the cellchatshiny docker container by running the example command below in the terminal
 ```
 docker run --name cellchatshiny -p 2020:3838 -d --restart unless-stopped -v /PATH_to_File/cellchat.rds:/srv/shiny-server/Cellchat/cellchat.rds ucigenomics/cellchatshiny:beta
 ```
-**NB**: You MUST specify the absolute path to the cellchat.rds file you saved by modifying the part `/PATH_to_File/cellchat.rds` in the above command.  
 
-* Step IV: Access the CellChat app by simply clicking the url or coping and pasting the url into your browser: http://localhost:2020/Cellchat
+* Step IV: Access the CellChat app by simply clicking the url or pasting the url into your browser: http://localhost:2020/Cellchat
 
+**NB**: In Step III, you MUST specify the absolute path to the `cellchat.rds` file you saved by modifying the part `/PATH_to_File/cellchat.rds` in the above command.  
 
+### Running multiple CellChat Shiny apps 
 To open two apps for simultaneously exploring cell-cell communication from two datasets, you would need to open a new instance of docker run, and assign a different container name (--name) and also host port (-p XXXX:3838). For example, here we create two apps for two CellChat objects `cellchat_humanSkin_NL.rds` and `cellchat_humanSkin_LS.rds` by running the command below in the terminal
 
 ```

@@ -24,11 +24,16 @@ To open two apps for simultaneously exploring cell-cell communication from two d
 
 `
 docker pull ucigenomics/cellchatshiny:beta
+
 docker run --name cellchatshiny_NL -p 2020:3838 -d --restart unless-stopped -v /Users/suoqinjin/Documents/CellChat/tutorial/cellchat_humanSkin_NL.rds:/srv/shiny-server/Cellchat/cellchat.rds ucigenomics/cellchatshiny:beta
+
 docker run --name cellchatshiny_LS -p 2021:3838 -d --restart unless-stopped -v /Users/suoqinjin/Documents/CellChat/tutorial/cellchat_humanSkin_LS.rds:/srv/shiny-server/Cellchat/cellchat.rds ucigenomics/cellchatshiny:beta
 `
+
 We then can access the two CellChat apps using the two urls below
+
 http://localhost:2020/Cellchat
+
 http://localhost:2021/Cellchat
 
 

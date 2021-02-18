@@ -45,3 +45,9 @@ Currently this standalone shiny app can be only used in Linux system.
 If you have any question, comment or suggestion, please post it in the 'Issues' section or contact cellchat.package@gmail.com.
 
 
+## Docker command
+The full docker commands are list [here](https://docs.docker.com/engine/reference/commandline/docker/). Below are several common used.
+* `docker run`: Run a command in a new container
+* `docker ps`: List all containers
+* `docker stop`: Stop one or more running containers
+* `docker rm`:	Remove one or more containers

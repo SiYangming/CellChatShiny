@@ -3,38 +3,35 @@ This is CellChat's Shiny app docker container or standalone shiny app for our [C
 
 
 ## Running CellChat Shiny docker container:
-Please install [docker](https://www.docker.com/) if not on your system, and save your CellChat object from R/Rstudio as 'cellchat.rds' using `saveRDS()`. Then run the following two commands in the **Terminal**. 
+* Step I: Please install [docker](https://www.docker.com/) if not on your system, and save your CellChat object from R/Rstudio as 'cellchat.rds' using `saveRDS()`.
+ 
+ Then run the following two commands in the **Terminal**. 
 
-* Download the prebuilt container to your system via 
+* Step II: Download the prebuilt container to your system via 
 
-`docker pull ucigenomics/cellchatshiny:beta`
+```docker pull ucigenomics/cellchatshiny:beta```
 
-* Run the cellchatshiny docker container using the example command below
+* Step III: Run the cellchatshiny docker container using the example command below
 
-`docker run --name cellchatshiny -p 2020:3838 -d --restart unless-stopped -v /PATH_to_File/cellchat.rds:/srv/shiny-server/Cellchat/cellchat.rds ucigenomics/cellchatshiny:beta`
-
+```
+docker run --name cellchatshiny -p 2020:3838 -d --restart unless-stopped -v /PATH_to_File/cellchat.rds:/srv/shiny-server/Cellchat/cellchat.rds ucigenomics/cellchatshiny:beta
+```
 **NB**: You MUST specify the absolute path to the cellchat.rds file you saved by modifying the part `/PATH_to_File/cellchat.rds` in the above command.  
 
-* Access the CellChat app by simply clicking the url or coping and pasting the url into your browser
-
-http://localhost:2020/Cellchat
+* Step IV: Access the CellChat app by simply clicking the url or coping and pasting the url into your browser: http://localhost:2020/Cellchat
 
 
 To open two apps for simultaneously exploring cell-cell communication from two datasets, you would need to open a new instance of docker run, and assign a different container name (--name) and also host port (-p XXXX:3838). For example, here we create two apps for two CellChat objects `cellchat_humanSkin_NL.rds` and `cellchat_humanSkin_LS.rds` by running the command below in the terminal
 
-`
+```
 docker pull ucigenomics/cellchatshiny:beta
 
 docker run --name cellchatshiny_NL -p 2020:3838 -d --restart unless-stopped -v /Users/suoqinjin/Documents/CellChat/tutorial/cellchat_humanSkin_NL.rds:/srv/shiny-server/Cellchat/cellchat.rds ucigenomics/cellchatshiny:beta
 
 docker run --name cellchatshiny_LS -p 2021:3838 -d --restart unless-stopped -v /Users/suoqinjin/Documents/CellChat/tutorial/cellchat_humanSkin_LS.rds:/srv/shiny-server/Cellchat/cellchat.rds ucigenomics/cellchatshiny:beta
-`
+```
 
-We then can access the two CellChat apps using the two urls below
-
-http://localhost:2020/Cellchat
-
-http://localhost:2021/Cellchat
+We then can access the two CellChat apps using the two urls: http://localhost:2020/Cellchat and http://localhost:2021/Cellchat
 
 
 ## Running CellChat standalone shiny app:
